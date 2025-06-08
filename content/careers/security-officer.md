@@ -3,7 +3,7 @@ title: "Oficer Ochrony"
 description: "Nasi oficerowie ochrony są kluczowi dla zapewnienia bezpieczeństwa i dobrostanu personelu Weyland-Yutani."
 date: 2019-09-20T05:15:39-04:00
 salary: "45,000"
-location: "Acheron"
+location: "Homestead II"
 series: ["careers"]
 weight: 3
 ---

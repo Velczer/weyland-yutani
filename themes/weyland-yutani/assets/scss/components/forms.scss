@@ -40,13 +40,14 @@
   }
 
   button {
-    grid-column: span 1;
+    grid-column: span 2;
     padding: var(--spacing-1);
   }
 
   &__resume,
   &__select,
-  &__message {
+  &__message,
+  &__button {
     @include screen-above($tablet) {
       grid-column: span 2;
     }
