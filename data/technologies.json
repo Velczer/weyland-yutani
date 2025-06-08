@@ -1,17 +1,17 @@
 [
   {
     "image": "/images/loader-small.jpg",
-    "title": "Security",
-    "blurb": "We dedicate a large amount of our resources and funding to the advancement of security for both military and private sector applications."
+    "title": "Bezpieczeństwo",
+    "blurb": "Przeznaczamy znaczną część naszych zasobów i funduszy na rozwój bezpieczeństwa, zarówno dla zastosowań wojskowych, jak i sektora prywatnego."
   },
   {
     "image": "/images/ship-small.jpg",
-    "title": "Manufacturing",
-    "blurb": "We manufacture and service numerous fleets of starships, including ships and crafts that are utilized by the United States Colonial Marine Corps."
+    "title": "Produkcja",
+    "blurb": "Produkujemy i serwisujemy liczne floty statków kosmicznych, w tym jednostki wykorzystywane przez United States Colonial Marine Corps."
   },
   {
     "image": "/images/processor-small.jpg",
-    "title": "Terraforming",
-    "blurb": "While our atmospheric processing is streamlined and automated today, Weyland-Yutani still uses the same chemical model pioneered by Sir Weyland in 2015."
+    "title": "Terraformowanie",
+    "blurb": "Chociaż dziś nasze procesy atmosferyczne są zautomatyzowane i zoptymalizowane, Weyland-Yutani nadal korzysta z modelu chemicznego opracowanego przez Sir Weylanda w 2025 roku."
   }
 ]

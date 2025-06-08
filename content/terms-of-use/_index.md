@@ -1,22 +1,21 @@
 ---
-title: "Terms of Use"
-description: "Terms of Use for the Weyland Yutani Corporation."
+title: "Warunki korzystania"
+description: "Warunki korzystania z serwisu Korporacji Weyland Yutani."
 date: 2019-09-22T16:33:31-04:00
 ---
 
-These terms and conditions outline the rules and regulations for the use of the Weyland-Yutani website.
+Niniejsze warunki określają zasady korzystania z witryny internetowej Weyland-Yutani.
 
-The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: “Client”, “You” and “Your” refers to you, the person log on this website and compliant to the Company's terms and conditions. “The Company”, “Ourselves”, “We”, “Our” and “Us”, refers to our Company.
+Poniższa terminologia odnosi się do niniejszych Warunków, Polityki Prywatności, Oświadczenia o wyłączeniu odpowiedzialności oraz wszystkich Umów: „Klient”, „Ty” oraz „Twój” oznaczają osobę korzystającą z tej strony internetowej i akceptującą warunki Korporacji. „Korporacja”, „Nas”, „My”, „Nasz” i „Nasze” odnoszą się do naszej Korporacji.
 
-**Organizations**
+**Organizacje**
 
-All organizations may link to our website without approval.
+Wszystkie organizacje mogą zamieszczać linki do naszej strony bez wcześniejszej zgody.
 
-**Reservation of Rights**
+**Zastrzeżenie praw**
 
-We do not reserve any rights.
+Nie zastrzegamy sobie żadnych praw.
 
-**Removal of links from our website**
+**Usuwanie linków z naszej strony**
 
-If you find any link on our website that is offensive for any reason, you are free to contact and inform us.
-
+Jeśli znajdziesz na naszej stronie jakikolwiek link, który z jakiegokolwiek powodu jest dla Ciebie obraźliwy, masz prawo się z nami skontaktować i nas o tym poinformować.

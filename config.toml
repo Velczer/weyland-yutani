@@ -7,9 +7,9 @@ enableRobotsTXT = true
 [params]
   description = "The Weyland-Yutani Corporation specializes in and develops major advancements in technology, such as off-world colonization."
   subTitle = "Building Better Worlds"
-  currentOperation = "Acheron"
-  founded = "2157"
-  colonists = "158"
+  currentOperation = "Avalon"
+  founded = "rok 2257"
+  colonists = "5000"
   images = ["/images/weyland-yutani-social.jpg"]
 
 [taxonomies]
@@ -19,31 +19,31 @@ enableRobotsTXT = true
 
   [[menu.main]]
     identifier = "careers"
-    name = "Careers"
+    name = "Kariera"
     pageRef = "/careers/"
     weight = 1
 
   [[menu.main]]
     identifier = "news"
-    name = "News"
+    name = "Aktualności"
     pageRef = "/news/"
     weight = 2
 
   [[menu.main]]
     identifier = "contact"
-    name = "Contact"
+    name = "Kontakt"
     pageRef = "/contact/"
     weight = 3
 
   [[menu.required]]
     identifier = "privacy-policy"
-    name = "Privacy Policy"
+    name = "Polityka Prywatności"
     pageRef = "/privacy-policy/"
     weight = 1
 
   [[menu.required]]
     identifier = "terms-of-use"
-    name = "Terms of Use"
+    name = "Warunki korzystania"
     pageRef = "/terms-of-use/"
     weight = 2
 

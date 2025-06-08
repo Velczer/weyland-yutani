@@ -1,6 +1,6 @@
 ---
 title: "Copyright"
-description: "Copyright information for the Weyland Yutani Corporation."
+description: "Informacje o prawach autorskich korporacji Weyland Yutani."
 date: 2019-09-22T16:19:32-04:00
 layout: "section"
 ---

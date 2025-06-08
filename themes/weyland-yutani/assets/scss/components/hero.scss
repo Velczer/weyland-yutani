@@ -36,6 +36,7 @@
     border-left: var(--border);
     border-bottom: var(--border);
     text-transform: uppercase;
+    white-space: nowrap;
 
     &--span2 {
       @include screen-below($tablet) {

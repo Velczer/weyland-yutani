@@ -8,35 +8,37 @@
     </div>
 
     <form
+      method="POST"
       class="grid form"
       name="apply"
       action="/success/"
       netlify
       netlify-honeypot="bot-field"
+      enctype="multipart/form-data"
     >
 
       <label for="name">
         <span class="visually-hide">
-          Your Name
+          Twoje imię
         </span>
-        <input type="text" id="name" name="name" placeholder="Name" required aria-required="true" />
+        <input type="text" id="name" name="name" placeholder="Imię i nazwisko" required aria-required="true" />
       </label>
 
       <label for="email">
         <span class="visually-hide">
-          Your Email
+          Twój Email
         </span>
         <input type="email" id="email" name="email" placeholder="Email" required aria-required="true" />
       </label>
 
       <div class="form__select">
-        <label class="visually-hide" for="job-select">Choose a career:</label>
+        <label class="visually-hide" for="job-select">Wybierz stanowisko:</label>
 
         <i></i>
 
         <select name="jobs" id="job-select" required aria-required="true">
 
-          <option value="">Select Career</option>
+          <option value="">Wybierz stanowisko</option>
 
           {{ range .Site.Taxonomies.series.careers }}
             <option value="{{ lower .Title }}">{{ .Title }}</option>
@@ -47,18 +49,18 @@
 
       <label class="form__resume custom-file-input" for="resume">
 
-        <span>Upload Resume</span>
+        <span>Prześlij CV</span>
 
         <input name="resume" id="resume" type="file" accept=".pdf, .doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 
       </label>
 
       <label class="visually-hide" for="bot-field">
-        Are you a pesky robot?
+        Czy jesteś androidem?
         <input type="text" id="bot-field" />
       </label>
 
-      <button class="form__button button" type="submit">Submit</button>
+      <button class="form__button button" type="submit">Wyślij</button>
 
     </form>
 

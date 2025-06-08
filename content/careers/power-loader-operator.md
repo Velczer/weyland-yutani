@@ -1,11 +1,11 @@
 ---
-title: "P-5000 Operator"
-description: "Our P-5000 operators are highly trained and are essential to the Weyland-Yutani supply chain."
+title: "Operator P-5000"
+description: "Nasi operatorzy P-5000 są wysoko wykwalifikowani i stanowią kluczowy element łańcucha dostaw Weyland-Yutani."
 date: 2019-09-18T15:13:06-04:00
 salary: "50,000"
-location: "Classified"
+location: "Poufne"
 series: ["careers"]
 weight: 2
 ---
 
-Weyland-Yutani is seeking a P-5000 operator with a Class-2 rating. Additional training will be provided, which incldues simulated and  applied practices. Responsibilities include lifting and moving heavy equipment and ordnance for the Weyland-Yutani fleet. Once hired, the operator will be required to pass a physical fitness test twice a year.
+Weyland-Yutani poszukuje operatora P-5000 z kwalifikacją klasy 2. Zapewnione zostanie dodatkowe szkolenie, obejmujące zarówno symulacje, jak i praktyczne ćwiczenia. Do obowiązków należy podnoszenie i przemieszczanie ciężkiego sprzętu oraz uzbrojenia dla floty Weyland-Yutani. Po zatrudnieniu operator będzie zobowiązany do zdania testu sprawności fizycznej dwa razy w roku.

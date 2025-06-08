@@ -1,6 +1,6 @@
 ---
-title: "Refinery Operator"
-description: "Our refinery operators utilize specialized equipment and machines to transform raw materials into usable products."
+title: "Operator Rafinerii"
+description: "Nasi operatorzy rafinerii obsługują specjalistyczny sprzęt i maszyny, przekształcając surowce w produkty gotowe do użycia."
 date: 2019-09-18T15:13:13-04:00
 salary: "70,000"
 location: "Acheron"
@@ -8,4 +8,4 @@ series: ["careers"]
 weight: 1
 ---
 
-Weyland-Yutani is seeking a motivated refinery operator for our upcoming operation to Acheron. Responsibilities include utilizing specialized equipment and machines to transform raw materials into usable products. You will also be expected to oversee the maintenance and well-being of the refinery on a day-to-day basis.
+Weyland-Yutani poszukuje zmotywowanego operatora rafinerii do nadchodzącej operacji na Acheron. Do Twoich obowiązków będzie należało korzystanie ze specjalistycznego sprzętu i maszyn do przetwarzania surowców w produkty gotowe do użycia. Oczekujemy także, że będziesz nadzorować codzienną konserwację i sprawność rafinerii.
