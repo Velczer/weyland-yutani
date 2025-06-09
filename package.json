@@ -1,0 +1,23 @@
+{
+  "name": "weyland-yutani",
+  "version": "1.0.0",
+  "description": "![Weyland-Yutani Corporation](https://raw.githubusercontent.com/jacobproffer/weyland-yutani/master/static/images/weyland-yutani-social.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Velczer/weyland-yutani.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Velczer/weyland-yutani/issues"
+  },
+  "homepage": "https://github.com/Velczer/weyland-yutani#readme",
+  "dependencies": {
+    "pg": "^8.16.0"
+  }
+}

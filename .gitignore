@@ -1,6 +1,7 @@
 # Hugo
 public/
 resources/
+node_modules/
 
 # OSX
 .DS_Store
