@@ -7,11 +7,11 @@
       <h1>{{ .Title }}</h1>
     </div>
 
-    <ul class="unstyled-list grid grid--two-column grid--list grid--one-col-mobile">
+    <ul class="unstyled-list news-list grid grid--three-column grid--list grid--one-col-mobile">
 
       {{ range .Pages }}
 
-        <li>
+        <li data-restricted="{{ .Params.restricted }}">
 
           {{ .Render "article" }}
 
@@ -22,6 +22,19 @@
     </ul>
 
   </div>
+
 </section>
+
+<section>
+    <div class="container">
+      <div class="internal-header center">
+        <button class="override-btn" onclick="initiateOverride()">Initiate Override</button>
+      </div>
+    </div>
+</section>
+
+<div id="terminal-overlay">
+  <div id="terminal"></div>
+</div>
 
 {{ end }}

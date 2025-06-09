@@ -1,0 +1,6 @@
+.news-list {
+
+    li[data-restricted="true"] {
+        display: none;
+    }
+}

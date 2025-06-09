@@ -25,7 +25,7 @@ h2 {
   font-size: rem(14);
 }
 
-p {
+p, li {
   font-size: rem(14);
   line-height: 2;
 
@@ -57,7 +57,18 @@ strong {
 }
 
 .success-text {
-  color: #00ff99;
+  --terminal: #00ff99;
+  color: var(--terminal);
   font-family: 'Orbitron', 'Share Tech Mono', monospace;
-  text-shadow: 0 0 2px #00ff99, 0 0 5px #00ff99, 0 0 10px #007f4f, 0 0 20px #005f3a;
+  text-shadow: 0 0 2px var(--terminal), 0 0 5px var(--terminal), 0 0 10px #007f4f, 0 0 20px #005f3a;
+}
+
+.error-text {
+  color: var(--terminal-error);
+  font-family: 'Orbitron', 'Share Tech Mono', monospace;
+  text-shadow:
+    0 0 2px var(--terminal-error),
+    0 0 5px var(--terminal-error),
+    0 0 10px #7f001a,
+    0 0 20px #5f000f;
 }

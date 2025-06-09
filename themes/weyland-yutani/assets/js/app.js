@@ -81,7 +81,10 @@ const triggerFadeInAnimation = (element) => {
 // Function to setup fade-in animations on scroll
 const setupFadeInAnimation = (element) => {
   // Set initial state
-  gsap.set(element, { opacity: 0, y: 30 });
+  gsap.set(element, {
+    opacity: 0,
+    y: 30
+  });
 
   // Create ScrollTrigger instance
   const trigger = ScrollTrigger.create({
@@ -133,8 +136,9 @@ function displayFutureDateTime() {
 // Start the future time display
 displayFutureDateTime();
 
+
+// Modal functionality
 document.addEventListener("DOMContentLoaded", function () {
-  // Otwieranie
   document.querySelectorAll("[data-modal]").forEach(btn => {
     btn.addEventListener("click", () => {
       const modalId = btn.getAttribute("data-modal");
@@ -145,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Zamknięcie przez kliknięcie w .close
   document.querySelectorAll(".modal .close").forEach(closeBtn => {
     closeBtn.addEventListener("click", () => {
       const modal = closeBtn.closest(".modal");
@@ -155,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Zamknięcie przez kliknięcie w tło
   window.addEventListener("click", (event) => {
     document.querySelectorAll(".modal").forEach(modal => {
       if (event.target === modal) {
@@ -165,6 +167,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+// Check for transaction code
 async function checkCode() {
   const code = document.getElementById('codeInput').value.trim();
 
@@ -178,8 +182,12 @@ async function checkCode() {
 
   const response = await fetch('/.netlify/functions/verify-code', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ code })
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      code
+    })
   });
 
   if (!response.ok) {
@@ -198,3 +206,88 @@ async function checkCode() {
     alert("❌ Coś poszło nie tak");
   }
 }
+
+
+// Terminal JS hack
+const commands = [
+  "[OVRD] CONNECTING TO NODE... ✔",
+  "[OVRD] HANDSHAKE PROTOCOL INITIATED...",
+  "[OVRD] BYPASSING SECURITY TOKEN...",
+  "[OVRD] ACCESS LEVEL: EMPLOYEE",
+  "[OVRD] ELEVATING PERMISSIONS... ███████████████ 100%",
+  "[OVRD] ROOT CREDENTIALS ACCEPTED.",
+  "[OVRD] ACCESSING /usr/sys/wy-core/blackbox",
+  "[OVRD] DECRYPTING... DONE",
+  "[OVRD] SYSTEM OVERRIDE: ACTIVE",
+  "[OVRD] CONNECTION STABLE",
+  "[OVRD] ACCESSING HIGH-CONFIDENTIAL DATA...",
+];
+
+function initiateOverride() {
+  const overlay = document.getElementById('terminal-overlay');
+  const terminal = document.getElementById('terminal');
+  const button = document.querySelector('.override-btn');
+
+  overlay.style.display = 'block';
+  button.style.display = 'none';
+  terminal.innerHTML = '';
+  document.body.style.overflow = 'hidden';
+
+  let lineIndex = 0;
+
+  function typeLine(line, callback) {
+    const container = document.createElement('div');
+    terminal.appendChild(container);
+
+    let charIndex = 0;
+    const cursor = document.createElement('span');
+    cursor.className = 'blinking-cursor';
+    container.appendChild(cursor);
+
+    function typeChar() {
+      if (charIndex < line.length) {
+        cursor.insertAdjacentText('beforebegin', line[charIndex]);
+        charIndex++;
+        terminal.scrollTop = terminal.scrollHeight;
+        setTimeout(typeChar, 20 + Math.random() * 50);
+      } else {
+        container.removeChild(cursor);
+        callback();
+      }
+    }
+
+    typeChar();
+  }
+
+  function typeNext() {
+    if (lineIndex < commands.length) {
+      typeLine(commands[lineIndex], () => {
+        lineIndex++;
+        setTimeout(typeNext, 200);
+      });
+    } else {
+      setTimeout(() => {
+        overlay.style.display = 'none';
+        document.body.style.overflow = '';
+        sessionStorage.setItem("corp-token", "AUTHORIZED");
+        location.reload();
+      }, 2000);
+    }
+  }
+
+  typeNext();
+}
+
+// Manage corp authorized elements
+document.addEventListener("DOMContentLoaded", () => {
+  const hasAccess = sessionStorage.getItem("corp-token") === "AUTHORIZED";
+
+  document.querySelectorAll("li[data-restricted='true']").forEach(el => {
+    if (hasAccess) {
+      el.style.display = "block";
+
+      const button = document.querySelector('.override-btn');
+      button.style.display = "none";
+    }
+  });
+});

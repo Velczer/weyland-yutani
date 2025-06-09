@@ -1,4 +1,14 @@
 .list-article {
+  height: 100%;
+
+  .border {
+    height: 100%;
+  }
+
+  .content {
+    height: calc(100% - 108px);
+  }
+
   a {
     display: block;
     padding: var(--spacing-3) var(--spacing-2);

@@ -1,0 +1,33 @@
+#terminal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+  color: var(--terminal);
+  z-index: 1000;
+  display: none;
+}
+
+#terminal {
+  padding: 20px;
+  white-space: pre-wrap;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  background-color: var(--terminal);
+  margin-left: 5px;
+  animation: blink2 1s step-end infinite;
+}
+
+@keyframes blink2 {
+  50% {
+    background-color: transparent;
+  }
+}

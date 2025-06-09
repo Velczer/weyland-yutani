@@ -24,10 +24,6 @@
     grid-template-columns: max-content max-content;
     justify-content: space-between;
 
-    @include screen-above($tablet) {
-      border-bottom: 2px solid var(--border-color);
-    }
-
     @include screen-below($tablet) {
       padding: var(--spacing-1) 0;
     }

@@ -1,11 +1,16 @@
 ---
-title: "Sitrep #01"
-description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sapiente? Cum debitis deserunt nesciunt minus repudiandae harum quisquam maiores deleniti."
+title: "Ozyrys"
+description: "Ostatni lot Ozyrysa"
 series: ["news"]
 images: ["/images/weyland-yutani-social.jpg"]
 date: 2019-09-20T02:45:34-04:00
+restricted: true
 ---
 
-Lorem Khaled Ipsum is a major key to success. Always remember in the jungle there’s a lot of they in there, after you overcome they, you will make it to paradise. The first of the month is coming, we have to get money, we have no choice. It cost money to eat and they don’t want you to eat. Watch your back, but more importantly when you get out the shower, dry your back, it’s a cold world out there. Bless up. The key to more success is to have a lot of pillows. Learning is cool, but knowing is better, and I know the key to success. Egg whites, turkey sausage, wheat toast, water. Of course they don’t want us to eat our breakfast, so we are going to enjoy our breakfast.
+[LOG_ERROR_324] >> PR0T0K0Ł_M1SZJ1_❌💾  
+> SYGN4Ł...U7R4C0NY...███  
+> ...W3Y.L4ND—YU7ANI...PR0GR4M ██X121... █
 
-Find peace, life is like a water fall, you’ve gotta flow. Let’s see what Chef Dee got that they don’t want us to eat. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. In life there will be road blocks but we will over come it. I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. You do know, you do know that they don’t want you to have lunch. I’m keeping it real with you, so what you going do is have lunch.
+>> #K0N74KT—ZA8L0K0W4NY ████  
+>> D4N3 PR0BA...███ U7R4C0N3 ██  
+>> L4NĐ...███...█ M1R4 ████ > ŚLADY KRWI ████  
