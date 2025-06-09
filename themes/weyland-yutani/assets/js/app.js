@@ -271,7 +271,7 @@ function initiateOverride() {
         audio.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
 
       setTimeout(() => {
-        sessionStorage.setItem("corp-token", "AUTHORIZED");
+        localStorage.setItem("corp-token", "AUTHORIZED");
         location.reload();
       }, 2000);
     }
@@ -282,7 +282,7 @@ function initiateOverride() {
 
 // Manage corp authorized elements
 document.addEventListener("DOMContentLoaded", () => {
-  const hasAccess = sessionStorage.getItem("corp-token") === "AUTHORIZED";
+  const hasAccess = localStorage.getItem("corp-token") === "AUTHORIZED";
 
   document.querySelectorAll("li[data-restricted='true']").forEach(el => {
     if (hasAccess) {
