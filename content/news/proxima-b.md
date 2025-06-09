@@ -6,19 +6,13 @@ images: ["/images/weyland-yutani-social.jpg"]
 date: 2021-06-09T17:55:15-04:00
 ---
 
-> **Kod misji:** WY-412-G3
-
-> **Lokalizacja:** HR2007 - Gamma III – *Proxima B*
-
-> **Data lądowania:** 11.06.2201
-
-> **Status planety:** Niezdatna do kolonizacji
-
-> **Status misji:** Zakończona niepowodzeniem
-
-> **Oficjalna klasyfikacja:** Częściowy sukces / ewakuacja awaryjna
-
-> **Uczestnicy:** Jednostka badawcza Lasalle Bionational
+> **Kod misji:** WY-412-G3  
+> **Lokalizacja:** HR2007 - Gamma III – *Proxima B*  
+> **Data lądowania:** 11.06.2201  
+> **Status planety:** Niezdatna do kolonizacji  
+> **Status misji:** Zakończona niepowodzeniem  
+> **Oficjalna klasyfikacja:** Częściowy sukces / ewakuacja awaryjna  
+> **Uczestnicy:** Jednostka badawcza Lasalle Bionational  
 
 
 ### 📄 Protokół misji

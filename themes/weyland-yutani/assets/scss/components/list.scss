@@ -7,6 +7,12 @@
 
   .content {
     height: calc(100% - 108px);
+
+    img {
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+    }
   }
 
   a {

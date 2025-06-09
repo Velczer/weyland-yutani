@@ -266,9 +266,11 @@ function initiateOverride() {
         setTimeout(typeNext, 200);
       });
     } else {
+        const audio = document.getElementById("accessGrantedSound");
+        audio.currentTime = 0; // resetuje, by zagrało od początku
+        audio.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
+
       setTimeout(() => {
-        overlay.style.display = 'none';
-        document.body.style.overflow = '';
         sessionStorage.setItem("corp-token", "AUTHORIZED");
         location.reload();
       }, 2000);

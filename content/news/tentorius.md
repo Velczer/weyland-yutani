@@ -2,28 +2,20 @@
 title: "Tentorius"
 description: "Zielony Eden z koszmaru — analiza misji TerraformCorp"
 series: ["news"]
-images: ["/images/weyland-yutani-social.jpg"]
+images: ["/images/tentarius.png"]
 date: 2024-09-09T17:55:15-04:00
 restricted: true
 ---
 
 
-> **Kod misji:** TF-775-TN
-
-> **Lokalizacja:** Układ Lacerda - Tentorius
-
-> **Data ustanowienia kolonii:** 14.05.2196
-
-> **Data ostatniego lądowania:** 9.09.2204
-
-> **Status planety:** Warunkowo terraformowalna
-
-> **Status misji:** W toku / Zakłócenia operacyjne
-
-> **Oficjalna klasyfikacja:** Zielona strefa badawcza – ograniczony dostęp
-
-> **Uczestnicy:** Jednostka badawcza TerraFormCorp
-
+> **Kod misji:** TF-775-TN  
+> **Lokalizacja:** Układ Lacerda - Tentorius  
+> **Data ustanowienia kolonii:** 14.05.2196  
+> **Data ostatniego lądowania:** 9.09.2204  
+> **Status planety:** Warunkowo terraformowalna  
+> **Status misji:** W toku / Zakłócenia operacyjne  
+> **Oficjalna klasyfikacja:** Zielona strefa badawcza – ograniczony dostęp  
+> **Uczestnicy:** Jednostka badawcza TerraFormCorp  
 
 ### 📄 Protokół misji
 > Ustanowienie kolonii badawczej na planecie Tentorius w celu przeprowadzenia długofalowej analizy geologicznej oraz przygotowania gruntu pod terraformowanie.
