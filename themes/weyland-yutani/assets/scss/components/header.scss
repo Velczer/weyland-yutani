@@ -4,7 +4,7 @@
   @include size(100%, auto);
   position: fixed;
   padding: var(--spacing-2) 0;
-  z-index: 2;
+  z-index: 100;
   background-color: var(--header-background);
   transition: opacity var(--animation-duration) ease-in-out;
 

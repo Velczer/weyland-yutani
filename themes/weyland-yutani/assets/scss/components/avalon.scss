@@ -26,6 +26,8 @@
         padding: #{create-fluid-value(65px, 130px)} 0 #{create-fluid-value(30px, 60px)};
 
         &-item {
+
+
             &--text {
                 padding: 0 0 60px;
             }
@@ -35,6 +37,11 @@
                 padding: 0 20px;
                 display: flex;
                 align-items: center;
+
+                @include screen-below($tablet) {
+                    flex-direction: column;
+                    gap: 80px 0;
+                }
 
                 img {
                     position: relative;
@@ -57,11 +64,21 @@
         background-image: url(/images/weyland-hero2.jpg);
         height: 100vh;
 
+        @include screen-below($tablet) {
+            flex-direction: column;
+            padding: 0;
+        }
+
         img {
             width: 50vw;
             position: absolute;
             height: 100%;
             object-fit: cover;
+
+            @include screen-below($tablet) {
+                position: relative;
+                width: 100%;
+            }
         }
 
         &-text {
@@ -74,6 +91,10 @@
             display: flex;
             align-items: center;
             background: #0000006b;
+
+            @include screen-below($tablet) {
+                width: 100%;
+            }
         }
     }
 
@@ -92,6 +113,11 @@
             max-width: 1100px;
             margin: auto;
             border-radius: 50px;
+
+            @include screen-below($tablet) {
+                flex-direction: column;
+                margin: 0 12px;
+            }
 
             p {
                 font-size: 16px;
