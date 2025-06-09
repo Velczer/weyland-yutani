@@ -67,6 +67,7 @@ Misja uznana za częściowo udaną:
 - Priorytetowa analiza substancji AO-3959X.91  
 - Rekonstrukcja pamięci syntetyka David 8  
 - Utajnienie incydentu wobec instytucji zewnętrznych  
+- Zabezpieczenie ciała Petera Weylanda
 
 ---
 

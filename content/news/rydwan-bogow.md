@@ -51,12 +51,12 @@ Na rozkaz przedstawiciela korporacji pokładowej załoga Montero zmieniła kurs 
 
 ### 📌 Rekomendacje korporacyjne
 
-- **Pełna dekontaminacja jednostki Kronos**  
-- **Utylizacja substancji 26 Draconis**, poza kontrolowanymi laboratoriami  
-- **Przesłuchanie i obserwacja biologiczna** wszystkich ocalałych  
-- **Uziemienie agenta Bionational**, jeżeli jeszcze funkcjonuje  
-- **Zakaz kontaktu z jednostką Sotillo – obiekt monitorowany**  
-- **Zbadanie LV-1113** – możliwe pierwotne źródło mutagenów
+- Pełna dekontaminacja jednostki Kronos  
+- Utylizacja substancji 26 Draconis, poza kontrolowanymi laboratoriami  
+- Przesłuchanie i obserwacja biologiczna wszystkich ocalałych  
+- Uziemienie agenta Bionational, jeżeli jeszcze funkcjonuje  
+- Zakaz kontaktu z jednostką Sotillo – obiekt monitorowany  
+- Zbadanie LV-1113 – możliwe pierwotne źródło mutagenów
 
 ---
 
