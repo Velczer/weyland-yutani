@@ -55,3 +55,9 @@ h2,
 strong {
   font-weight: bold;
 }
+
+.success-text {
+  color: #00ff99;
+  font-family: 'Orbitron', 'Share Tech Mono', monospace;
+  text-shadow: 0 0 2px #00ff99, 0 0 5px #00ff99, 0 0 10px #007f4f, 0 0 20px #005f3a;
+}

@@ -8,12 +8,12 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ error: 'No token provided' }) };
   }
 
-  const client = new Client({ connectionString: process.env.DATABASE_URL });
+  const client = new Client({ connectionString: process.env.NETLIFY_DATABASE_URL });
   await client.connect();
 
   try {
     const res = await client.query(
-      `SELECT * FROM access_tokens 
+      `SELECT * FROM access_tokens
        WHERE token = $1 AND used = false AND expires_at > NOW()`,
       [token]
     );

@@ -168,6 +168,14 @@ document.addEventListener("DOMContentLoaded", function () {
 async function checkCode() {
   const code = document.getElementById('codeInput').value.trim();
 
+  if (code.length == 0) {
+    const modal = document.getElementById('buyTicket');
+    if (modal) {
+      modal.classList.add("show");
+    }
+    return;
+  }
+
   const response = await fetch('/.netlify/functions/verify-code', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

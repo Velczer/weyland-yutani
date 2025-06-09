@@ -12,7 +12,7 @@ exports.handler = async (event) => {
     };
   }
 
-  const client = new Client({ connectionString: process.env.DATABASE_URL });
+  const client = new Client({ connectionString: process.env.NETLIFY_DATABASE_URL });
   await client.connect();
 
   try {
@@ -23,7 +23,9 @@ exports.handler = async (event) => {
     }
 
     const token = uuidv4();
-    const expiresAt = new Date(Date.now() + 60 * 60 * 1000); // 60 minut
+
+    const now = new Date();
+    const expiresAt = new Date(now.getTime() + 60 * 60 * 1000);
 
     await client.query(
       'INSERT INTO access_tokens (token, code, expires_at) VALUES ($1, $2, $3)',

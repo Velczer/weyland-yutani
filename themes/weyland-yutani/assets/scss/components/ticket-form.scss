@@ -1,0 +1,74 @@
+.ticket-form {
+
+  .custom-file-input span {
+    padding: 10px 20px;
+    padding-right: 150px;
+  }
+
+  .grid-3,
+  .grid-4 {
+    grid-column: span 2;
+    gap: var(--spacing-1);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include screen-below($tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .section-title {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-bottom: var(--border);
+    padding-bottom: 0.2rem;
+    color: var(--white);
+    letter-spacing: 0.1em;
+    grid-column: span 2;
+  }
+
+  .points-counter {
+    font-weight: 700;
+    color: var(--yellow);
+    text-align: right;
+    margin-top: -0.7rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    letter-spacing: 0.1em;
+    grid-column: span 2;
+  }
+
+    input[type="number"] {
+        text-align: center;
+        font-weight: 700;
+    }
+}
+
+
+.attribute-group {
+  margin-bottom: 1rem;
+}
+
+
+.alert {
+  background: #220000;
+  border: 1px solid #ff0033;
+  color: #ff4477;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px #ff0033;
+  grid-column: span 2;
+}

@@ -7,14 +7,7 @@
       <h1>{{ .Title }}</h1>
     </div>
 
-    <form
-      class="grid form"
-      name="apply"
-      action="/success/"
-      netlify
-      netlify-honeypot="bot-field"
-    >
-
+    <form class="grid form" name="apply" action="/success-form/" netlify netlify-honeypot="bot-field">
       <label for="name">
         <span class="visually-hide">
           Twoje imię
@@ -39,7 +32,7 @@
           <option value="">Wybierz stanowisko</option>
 
           {{ range .Site.Taxonomies.series.careers }}
-            <option value="{{ lower .Title }}">{{ .Title }}</option>
+          <option value="{{ lower .Title }}">{{ .Title }}</option>
           {{ end }}
 
         </select>
@@ -49,18 +42,20 @@
 
         <span>Prześlij CV</span>
 
-        <input name="resume" id="resume" type="file" accept=".pdf, .doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+        <input name="resume" id="resume" type="file" required
+          accept=".pdf, .doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 
       </label>
 
-      <label for="resume" class="form__resume">
+      <label class="form__resume">
         <span><strong>Ważne!</strong><br />
-            W CV koniecznie umieść następujące informacje:<br/>
-            - Wypis poziomu twoich cech osobowych na podstawie raportu <a href="#SZSE">SZSE</a>*.<br/>
-            - Wypis twoich umiejętności jakie posiadasz na stanowisko z odpowiednią <a href="#skills">cyfrą kwalifikacji</a>**.<br />
-            - Wypis twoich talentów zawodowych, które wykorzystujesz w pracy.<br />
+          W CV koniecznie umieść następujące informacje:<br />
+          - Wypis poziomu twoich cech osobowych na podstawie raportu <a data-modal="szse">SZSE</a>.<br />
+          - Wypis twoich umiejętności jakie posiadasz na dane stanowisko<br> z odpowiednią <a data-modal="skills">cyfrą
+            kwalifikacji</a>.<br />
+          - Wypis twoich talentów zawodowych, które wykorzystujesz w pracy.<br />
 
-            prześlij również swoje drugie imię nadane przez rodziców. <span style="color:red">(imię gracza)</span>
+          prześlij również swoje drugie imię nadane przez rodziców. <span style="color:red">(imię gracza)</span>
         </span>
       </label>
 
@@ -73,41 +68,74 @@
 
     </form>
 
-    <br /><br /><br /><br />
+  </div>
 
-    <div id="SZSE">
-      <h2 class="h3">
-        "SZSE"
-      </h2>
+  <div id="szse" class="modal">
+    <div class="modal-content" style="max-width:1100px">
+      <span class="close">&times;</span>
+      <h2 class="h3">"SZSE"</h2>
 
       <h3 class="h4">
         System Zintegrowanej Selekcji i Ewaluacji.
-      </h2>
+        </h2>
 
-       <p style="text-align: left;">
-        *Wszyscy nowo zatrudnieni kolonizatorzy i pracownicy Weyland-Yutani podlegają obowiązkowemu badaniu SZSE — międzynarodowemu raportowi oceniającemu ich potencjał operacyjny na podstawie czterech kluczowych cech psychofizycznych:<br/>
-        - Siła — fizyczna moc i wytrzymałość, zdolność do obsługi ciężkiego sprzętu i pracy w trudnych warunkach<br/>
-        - Zręczność — koordynacja ruchowa, szybkość i precyzja, kluczowa podczas obsługi delikatnej aparatury i walki<br/>
-        - Spryt — zdolność szybkiego rozwiązywania problemów, podejmowania decyzji oraz adaptacji w nieprzewidywalnych sytuacjach<br/>
-        - Empatia — umiejętność nawiązywania relacji, rozumienia innych i pracy zespołowej, niezbędna przy długotrwałej izolacji<br/><br />
-        Każda z tych cech jest oceniana w skali od 1 do 5, jednak łączna suma wszystkich punktów musi wynieść <strong>dokładnie 14</strong>. To ograniczenie jest świadomym zabiegiem Weyland-Yutani — pozwala na zachowanie równowagi między potencjałem fizycznym, mentalnym i społecznym każdego człowieka.<br /><br />
-        Osoby, u których suma cech odbiega od tej normy, najczęściej są poddane modyfikacjom genetycznym lub eksperymentalnym procedurom. W praktyce oznacza to, że wynik spoza normy wskazuje na możliwe "abominacje" — nieprzewidywalne anomalie, które mogą mieć zarówno fatalne, jak i zaskakująco korzystne konsekwencje.<br /><br />
-        <span style="color:red">Podczas tworzenia postaci należy rozdzielić <strong>14</strong> punktów między cztery cechy, z zachowaniem zakresu od 1 do 5 w każdej z nich. W ten sposób test SZSE zapewnia wiarygodny profil człowieka gotowego podjąć się misji kolonizacyjnej i sprostać wyzwaniom, jakie niesie z sobą nowy świat.</span>
-      </p>
+
+        <div class="modal-content--max-height">
+          <p style="text-align: left;">
+            Wszyscy nowo zatrudnieni kolonizatorzy i pracownicy Weyland-Yutani podlegają obowiązkowemu badaniu SZSE —
+            międzynarodowemu raportowi oceniającemu ich potencjał operacyjny na podstawie czterech kluczowych cech
+            psychofizycznych:<br />
+            - Siła — fizyczna moc i wytrzymałość, zdolność do obsługi ciężkiego sprzętu i pracy w trudnych warunkach<br />
+            - Zręczność — koordynacja ruchowa, szybkość i precyzja, kluczowa podczas obsługi delikatnej aparatury i
+            walki<br />
+            - Spryt — zdolność szybkiego rozwiązywania problemów, podejmowania decyzji oraz adaptacji w nieprzewidywalnych
+            sytuacjach<br />
+            - Empatia — umiejętność nawiązywania relacji, rozumienia innych i pracy zespołowej, niezbędna przy
+            długotrwałej izolacji<br /><br />
+            Każda z tych cech jest oceniana w skali od 1 do 5, jednak łączna suma wszystkich punktów musi wynieść
+            <strong>dokładnie 14</strong>. To ograniczenie jest świadomym zabiegiem Weyland-Yutani — pozwala na zachowanie
+            równowagi między potencjałem fizycznym, mentalnym i społecznym każdego człowieka.<br /><br />
+            Osoby, u których suma cech odbiega od tej normy, najczęściej są poddane modyfikacjom genetycznym lub
+            eksperymentalnym procedurom. W praktyce oznacza to, że wynik spoza normy wskazuje na możliwe "abominacje" —
+            nieprzewidywalne anomalie, które mogą mieć zarówno fatalne, jak i zaskakująco korzystne
+            konsekwencje.<br /><br />
+            <span style="color:red">Podczas tworzenia postaci należy rozdzielić <strong>14</strong> punktów między cztery
+              cechy, z zachowaniem zakresu od 1 do 5 w każdej z nich. W ten sposób test SZSE zapewnia wiarygodny profil
+              człowieka gotowego podjąć się misji kolonizacyjnej i sprostać wyzwaniom, jakie niesie z sobą nowy
+              świat.</span>
+          </p>
+        </div>
     </div>
+  </div>
 
-    <br />
-
-    <div id="skills">
-      <p style="text-align: left;">**Każda postać na pokładzie statku kolonizacyjnego musi dysponować zestawem umiejętności, które definiują, jak skutecznie poradzi sobie w swojej roli. Twoje kwalifikacje to nic innego jak lista zawodowych zdolności i specjalistycznej wiedzy, które zdobyłeś w trakcie lat szkolenia, praktyki i wcześniejszych misji.<br /><br />
+  <div id="skills" class="modal">
+  <div class="modal-content" style="max-width:1000px">
+    <span class="close">&times;</span>
+    <h2 class="h3">Kwalifikacje</h2>
+      <div class="modal-content--max-height">
+        <p style="text-align: left;">Każda postać na pokładzie statku kolonizacyjnego musi dysponować zestawem
+      umiejętności, które definiują, jak skutecznie poradzi sobie w swojej roli. Twoje kwalifikacje to nic innego jak
+      lista zawodowych zdolności i specjalistycznej wiedzy, które zdobyłeś w trakcie lat szkolenia, praktyki i
+      wcześniejszych misji.<br /><br />
       Każda umiejętność jest oceniona liczbą od 1 do 3, gdzie:<br />
       1 — Podstawowy poziom, potrafisz wykonać zadanie pod nadzorem lub w prostych sytuacjach<br />
       2 — Solidne, samodzielne wykonanie, radzisz sobie z większością problemów i trudności<br />
-      3 — Ekspert, twoja wiedza i doświadczenie przewyższają większość współpracowników, potrafisz improwizować i uczyć innych<br /><br />
+      3 — Ekspert, twoja wiedza i doświadczenie przewyższają większość współpracowników, potrafisz improwizować i
+      uczyć innych<br /><br />
 
-      <span style="color:red">Limit punktów: Masz do rozdysponowania łącznie <strong>10</strong> punktów umiejętności, które możesz rozdzielić dowolnie między swoje kwalifikacje. <br />Podczas tworzenia postaci rozdzielasz punkty między umiejętności zgodnie z profilem zawodowym i stylem gry. Pamiętaj — umiejętności to nie tylko suche liczby, ale fundament twojej efektywności, a także sposób, w jaki twoja postać rozwiązuje kryzysy, napotyka zagrożenia i wspiera drużynę.</span></p>
-    </div>
+      <span style="color:red">Limit punktów: Masz do rozdysponowania łącznie <strong>10</strong> punktów umiejętności,
+        które możesz rozdzielić dowolnie między swoje kwalifikacje. <br />Podczas tworzenia postaci rozdzielasz punkty
+        między umiejętności zgodnie z profilem zawodowym i stylem gry. Pamiętaj — umiejętności to nie tylko suche
+        liczby, ale fundament twojej efektywności, a także sposób, w jaki twoja postać rozwiązuje kryzysy, napotyka
+        zagrożenia i wspiera drużynę.</span></p>
+        </p>
+      </div>
   </div>
+  </div>
+
 </section>
+
+
+
 
 {{ end }}
