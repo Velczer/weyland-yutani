@@ -1,6 +1,16 @@
 .footer {
   padding-bottom: var(--spacing-6-7);
 
+  .date-time {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: var(--white);
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: right;
+  }
+
   nav {
     &:first-of-type {
       order: 1;

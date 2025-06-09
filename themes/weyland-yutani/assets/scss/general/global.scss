@@ -63,6 +63,10 @@ img {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   color: var(--gray);
@@ -76,7 +80,7 @@ a {
   color: var(--white);
   letter-spacing: 3px;
   text-decoration: none;
-  transition: color var(--animation-duration) ease-in-out;
+  transition: all var(--animation-duration) ease-in-out;
 
   @include hover {
     color: var(--transparent);

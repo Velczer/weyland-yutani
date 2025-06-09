@@ -4,10 +4,18 @@
   padding-top: #{create-fluid-value(135px, 270px)};
   text-align: center;
 
+  &__heading{
+    color: var(--yellow);
+
+     span {
+      color: var(--white);
+    }
+  }
+
   &__subheading {
     display: block;
     padding-bottom: #{create-fluid-value(55px, 220px)};
-    color: var(--gray);
+    color: var(--white);
     font-weight: var(--weight-normal);
     text-transform: uppercase;
   }
@@ -17,10 +25,12 @@
     @include size(100%);
     overflow: hidden;
     z-index: -1;
+    opacity: 0.8;
   }
 
   &__background-image {
-    --animation-duration: 80s;
+    --animation-duration: 50s;
+    transform: scale(1.5);
     @include size(100%);
     object-fit: cover;
     animation-name: zoom;

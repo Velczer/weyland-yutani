@@ -108,30 +108,76 @@ if (fadeIns.length > 0) {
   fadeIns.forEach(setupFadeInAnimation);
 }
 
-// Function to trigger the CRT effect
-const triggerCRTEffect = (element) => {
-  const timeline = gsap.timeline();
+function displayFutureDateTime() {
+  const clockElement = document.getElementById('clock');
+  if (!clockElement) return;
 
-  timeline
-    .set(element, {
-      opacity: 0,
-      filter: 'brightness(2) blur(10px)', // Bright flash and blur
-    })
-    .to(element, {
-      opacity: 1,
-      duration: 0.3,
-      ease: 'power4.out',
-    })
-    .to(element, {
-      filter: 'brightness(1) blur(0px)', // Remove brightness and blur
-      duration: 0.5,
-      ease: 'power1.out',
-    })
-    .set(element, { scaleX: 1, scaleY: 1 }); // Reset any transforms
-};
+  const FUTURE_YEAR = 2239;
+  const CURRENT_YEAR = new Date().getFullYear();
+  const YEAR_OFFSET = FUTURE_YEAR - CURRENT_YEAR;
 
-// Example usage
-document.querySelectorAll('.crt-effect').forEach((element) => {
-  triggerCRTEffect(element);
+  const updateTime = () => {
+    const now = new Date();
+    const futureYear = now.getFullYear() + YEAR_OFFSET;
+
+    const dateString = `${futureYear}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    const timeString = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+
+    clockElement.innerHTML = `${dateString}<br>${timeString}`;
+  };
+
+  updateTime();
+  setInterval(updateTime, 1000);
+}
+
+// Start the future time display
+displayFutureDateTime();
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Otwieranie
+  document.querySelectorAll("[data-modal]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.getAttribute("data-modal");
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add("show");
+      }
+    });
+  });
+
+  // Zamknięcie przez kliknięcie w .close
+  document.querySelectorAll(".modal .close").forEach(closeBtn => {
+    closeBtn.addEventListener("click", () => {
+      const modal = closeBtn.closest(".modal");
+      if (modal) {
+        modal.classList.remove("show");
+      }
+    });
+  });
+
+  // Zamknięcie przez kliknięcie w tło
+  window.addEventListener("click", (event) => {
+    document.querySelectorAll(".modal").forEach(modal => {
+      if (event.target === modal) {
+        modal.classList.remove("show");
+      }
+    });
+  });
 });
 
+async function checkCode() {
+  const code = document.getElementById('codeInput').value.trim();
+
+  const response = await fetch('/.netlify/functions/check-code', {
+    method: 'POST',
+    body: JSON.stringify({ code }),
+  });
+
+  const result = await response.json();
+
+  if (result.success) {
+    window.location.href = result.path;
+  } else {
+    alert("❌ Nieprawidłowy kod");
+  }
+}

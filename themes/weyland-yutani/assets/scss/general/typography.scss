@@ -43,23 +43,13 @@ h2,
   margin-bottom: 0;
   letter-spacing: .2em;
   margin: 0 -.2em 0 0;
+  color: var(--yellow);
+  text-transform: uppercase;
 
   @include screen-above(1440px) {
     letter-spacing: .4em;
     margin: 0 -.4em 0 0;
   }
-}
-
-h1,
-h2,
-.h3 {
-  color: var(--white);
-}
-
-h1,
-h2,
-.h3 {
-  text-transform: uppercase;
 }
 
 strong {

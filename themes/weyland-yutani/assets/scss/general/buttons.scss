@@ -12,6 +12,7 @@
   letter-spacing: .15em;
   cursor: pointer;
   transition: background-color var(--animation-duration) ease-in-out;
+  text-shadow: none !important;
 
   &:active {
     background-color: var(--black);
@@ -20,5 +21,10 @@
   @include hover {
     color: var(--black);
     background-color: var(--gray);
+  }
+
+  &-inline {
+    display: inline-block;
+    padding: 26px 40px;
   }
 }

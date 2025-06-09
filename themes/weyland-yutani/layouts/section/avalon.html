@@ -1,0 +1,109 @@
+{{ define "main" }}
+
+<section class="center">
+
+    <div class="spacing avalon__background" id="buy-ticket">
+        <div class="container">
+            <div class="internal-header">
+                <h1>{{ .Title }}</h1>
+                <p>Projekt Avalon to najbardziej ambitna inicjatywa kolonizacyjna realizowana przez korporację Weyland-Yutani. Statek Avalon przewozi ponad 5000 pasażerów w kierunku planety Homestead II – nowego domu dla przyszłych pokoleń. Połączenie nowoczesnych technologii, komfortu oraz bezpieczeństwa czyni z Avalona nie tylko środek transportu, ale i symbol nadziei oraz nowego początku dla ludzkości.</p>
+
+                <form class="form grid">
+                    <input type="text" id="codeInput" placeholder="Wprowadź kod transakcji">
+                    <a class="button button-inline" data-modal="buyTicket" onclick="checkCode()">Kup bilet</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="avalon__content">
+        <div class="container">
+
+            <div class="avalon__ship">
+                <div class="avalon__ship-item avalon__ship-item--text gsap-fade-in">
+                    <h2>Statek Avalon</h2>
+                    <p>Avalon to międzygwiezdny liniowiec nowej generacji, długi na 1 kilometr, zaprojektowany z myślą o 120-letniej podróży. Napędzany przez reaktor fuzyjny klasy „Titan Alpha” oraz osłaniany zaawansowaną tarczą meteorową, Avalon przemierza głęboki kosmos, zapewniając pasażerom bezpieczeństwo i komfort. Jego wnętrze to połączenie funkcjonalności, luksusu i technologii przyszłości.</p>
+                </div>
+
+                <div class="avalon__ship-item avalon__ship-item--image">
+                    <div class="technology__image gsap-fade-in">
+                        <img src="/images/ship-bg.jpg" loading="lazy" alt="">
+                    </div>
+
+                    <div class="technology__image gsap-fade-in">
+                        <img src="/images/ship-bg2.jpg" loading="lazy" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="avalon__content avalon__image-section">
+        <img class="avalon__project-image" src="/images/pods.jpg" alt="">
+
+        <div class="avalon__image-section-text avalon__image-section-text-right">
+            <div class="avalon__image-section-text-box">
+                <h2>Niezawodne komory hibernacyjne</h2>
+                <p>W sercu statku znajduje się ponad 5000 komór hibernacyjnych klasy „CryoSafe MK-IV”, które umożliwiają bezpieczne przebycie ponad wieku w stanie pełnej kriostazy. Systemy nadzoru stale monitorują funkcje życiowe pasażerów, a redundancja zasilania gwarantuje niezawodność działania - nawet w przypadku awarii głównych systemów.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacing avalon__background avalon__background--apartments avalon__apartments">
+        <div class="avalon__apartments-text">
+            <h2>Luksusowe apartamenty</h2>
+            <p>Dla bardziej wymagających pasażerów przygotowano nowoczesne apartamenty pokładowe z widokiem na przestrzeń kosmiczną. Każdy z nich wyposażony jest w system klimatyzacji biomimetycznej, osobisty interfejs AI, strefę relaksu oraz usługę concierge 24/7. Od klasy Silver, przez Gold, aż po Premium, każda wersja dostosowana jest do indywidualnych potrzeb kolonistów i inwestorów.</p>
+        </div>
+    </div>
+
+    <div class="avalon__content">
+        <div class="container">
+
+            <div class="avalon__ship">
+                <div class="avalon__ship-item avalon__ship-item--text gsap-fade-in">
+                    <h2>Liczne rozrywki na pokładzie</h2>
+                        <p>Na czas podróży, Avalon oferuje bogaty wachlarz rozrywek, w tym:<br>
+                            Interaktywną mapę galaktyki, prezentującą aktualną pozycję statku oraz najciekawsze zakątki kosmosu.<br>
+                            Luksusowy basen z widokiem na przestrzeń kosmiczną, wyposażony w system sztucznej grawitacji.<br>
+                            Kasyno i bary, w tym słynny Starlight Lounge prowadzony przez syntetycznego barmana o zaskakująco ludzkim charakterze.<br>
+                            Wykwintne restauracje tematyczne, oferujące dania kuchni ziemskiej i eksperymentalnej kuchni kolonialnej.</p>
+                </div>
+
+                <div class="avalon__ship-item avalon__ship-item--image">
+                    <div class="technology__image gsap-fade-in">
+                        <img src="/images/galactic-map.jpg" loading="lazy" alt="">
+                    </div>
+
+                    <div class="technology__image gsap-fade-in">
+                        <img src="/images/pool.jpg" loading="lazy" alt="">
+                    </div>
+
+                    <div class="technology__image gsap-fade-in">
+                        <img src="/images/bar.jpg" loading="lazy" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="avalon__content" style="padding-top: 0;">
+        <div class="container">
+            <a class="button hero-padding" href="#buy-ticket">Kup bilet</a>
+        </div>
+    </div>
+
+    <div id="buyTicket" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Nie stać Cię na bilet?</h2>
+            <p>Dla osób chętnych do pracy korporacja Weyland-Yutani oferuje program zatrudnienia kolonialnego. Osoby zakwalifikowane do programu otrzymują darmowy transport w zamian za pracę w sektorach takich jak: inżynieria, ochrona, hydroponika czy utrzymanie infrastruktury na Homestead II.</p>
+
+            <a href="/careers" class="button hero-padding">Zobacz dostępne oferty pracy</a>
+        </div>
+    </div>
+
+
+</section>
+
+{{ end }}

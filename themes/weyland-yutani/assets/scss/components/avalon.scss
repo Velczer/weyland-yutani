@@ -1,0 +1,103 @@
+.avalon {
+    &__background {
+        height: 100vh;
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('/images/weyland-hero2.jpg');
+        display: flex;
+
+        &--apartments {
+            background-image: url('/images/apartments.jpg');
+        }
+
+        &--pods {
+            background-image: url('/images/pods.jpg');
+        }
+    }
+
+    &__content {
+        padding: #{create-fluid-value(65px, 130px)} 0 #{create-fluid-value(90px, 130px)};
+        background-color: var(--black);
+    }
+
+    &__ship {
+        padding: #{create-fluid-value(65px, 130px)} 0 #{create-fluid-value(30px, 60px)};
+
+        &-item {
+            &--text {
+                padding: 0 0 60px;
+            }
+
+            &--image {
+                position: relative;
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    position: relative;
+                    object-fit: cover;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &__image-section {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(/images/weyland-hero2.jpg);
+        height: 100vh;
+
+        img {
+            width: 50vw;
+            position: absolute;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-text {
+            width: 50vw;
+            margin-left: auto;
+            padding: 0 10vw 0 60px;
+            text-align: left;
+            color: var(--white);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: #0000006b;
+        }
+    }
+
+    &__apartments {
+        position: relative;
+        align-items: center;
+
+        &-text {
+            background: #000000c2;
+            color: var(--white);
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            margin: 0;
+            max-width: 1100px;
+            margin: auto;
+            border-radius: 50px;
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+
+}

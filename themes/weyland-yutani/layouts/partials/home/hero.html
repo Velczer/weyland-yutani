@@ -2,13 +2,14 @@
   <div class="container">
 
     <div>
-      <h1>{{ .Site.Title }}</h1>
-      <h2 class="hero__subheading h3 letter-spacing">Building Better Worlds</h2>
+      <h1 class="hero__heading">Weyland <span>- Yutani</span></h1>
+      <h2 class="hero__subheading h3 letter-spacing">{{ .Site.Params.subTitle}}</h2>
     </div>
 
+    <h2 class="h3">Najnowsze projekty:</h3>
     <ul class="unstyled-list grid grid--hero grid--one-col-mobile">
       <li class="hero__grid-item hero__grid-item--span2 h4 letter-spacing hero-padding">
-        Obecna operacja: <span>{{ .Site.Params.currentOperation }}</span>
+        operacja: <a href="/avalon">{{ .Site.Params.currentOperation }}<span class="cursor-effect">|</span></a>
       </li>
       <li class="hero__grid-item hero__grid-item--operation-founded h5 letter-spacing hero-padding">
         Planowane dotarcie: <span>{{ .Site.Params.founded }}</span>
@@ -17,8 +18,8 @@
         Liczba kolonistów: <span>{{ .Site.Params.colonists }}</span>
       </li>
       <li class="button hero__grid-item hero__grid-item--operation-cta">
-        <a class="hero-padding" href="/apply/" aria-label="Apply to work for Weyland-Yutani">
-          Aplikuj teraz
+        <a class="hero-padding button" href="/avalon/" aria-label="Buy ticket on avalon">
+          Kup bilet
         </a>
       </li>
     </ul>
@@ -26,7 +27,7 @@
   </div>
   <div class="hero__background">
 
-    <img class="hero__background-image" src="/images/weyland-hero.jpg" alt="">
+    <img class="hero__background-image" src="/images/weyland-hero2.jpg" alt="">
 
   </div>
 </section>

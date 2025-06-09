@@ -1,6 +1,6 @@
 basepageRef = "https://weyland-yutani.proffer.dev"
 languageCode = "en-us"
-title = "Weyland-Yutani Corp"
+title = "Weyland-Yutani"
 theme = "weyland-yutani"
 enableRobotsTXT = true
 
@@ -8,7 +8,7 @@ enableRobotsTXT = true
   description = "The Weyland-Yutani Corporation specializes in and develops major advancements in technology, such as off-world colonization."
   subTitle = "Building Better Worlds"
   currentOperation = "Avalon"
-  founded = "rok 2257"
+  founded = "rok 2360"
   colonists = "5000"
   images = ["/images/weyland-yutani-social.jpg"]
 
@@ -18,22 +18,28 @@ enableRobotsTXT = true
 [menu]
 
   [[menu.main]]
+    identifier = "avalon"
+    name = "Avalon"
+    pageRef = "/avalon/"
+    weight = 1
+
+  [[menu.main]]
     identifier = "careers"
     name = "Kariera"
     pageRef = "/careers/"
-    weight = 1
+    weight = 2
 
   [[menu.main]]
     identifier = "news"
     name = "Aktualności"
     pageRef = "/news/"
-    weight = 2
+    weight = 3
 
   [[menu.main]]
     identifier = "contact"
     name = "Kontakt"
     pageRef = "/contact/"
-    weight = 3
+    weight = 4
 
   [[menu.required]]
     identifier = "privacy-policy"
