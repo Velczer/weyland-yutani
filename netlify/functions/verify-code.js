@@ -32,7 +32,7 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ redirect: `/formularz.html?token=${token}` })
+      body: JSON.stringify({ redirect: `/ticket-form?token=${token}` })
     };
   } finally {
     await client.end();
