@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+<section class="list spacing">
+  <div class="container">
+
+    <div class="internal-header center">
+      <h1>{{ .Title }}</h1>
+    </div>
+
+    <p>Access granted</p>
+
+  </div>
+</section>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const token = urlParams.get('token');
+
+  if (!token) {
+    window.location.href = '/';
+  }
+
+  fetch(`/.netlify/functions/authorize-token?token=${token}`)
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Unauthorized');
+      }
+    })
+    .catch(() => {
+      alert("Dostęp zabroniony lub token wygasł.");
+      window.location.href = '/';
+    });
+</script>
+
+{{ end }}
+
+

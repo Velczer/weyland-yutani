@@ -165,19 +165,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-async function checkCode() {
-  const code = document.getElementById('codeInput').value.trim();
+ async function checkCode() {
+    const code = document.getElementById('codeInput').value.trim();
 
-  const response = await fetch('/.netlify/functions/check-code', {
-    method: 'POST',
-    body: JSON.stringify({ code }),
-  });
+    const response = await fetch('/.netlify/functions/check-code', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ code })
+    });
 
-  const result = await response.json();
+    const result = await response.json();
 
-  if (result.success) {
-    window.location.href = result.path;
-  } else {
-    alert("❌ Nieprawidłowy kod");
-  }
+    if (result.success) {
+      window.location.href = result.path;
+    } else {
+      alert("❌ Nieprawidłowy kod");
+    }
 }
