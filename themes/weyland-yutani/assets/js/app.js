@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
  async function checkCode() {
     const code = document.getElementById('codeInput').value.trim();
 
-    const response = await fetch('/.netlify/functions/check-code', {
+    const response = await fetch('/.netlify/functions/verify-code', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ code })
@@ -179,6 +179,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (result.success) {
       window.location.href = result.path;
     } else {
+
+      const modal = document.getElementById('buyTicket');
+      if (modal) {
+        modal.classList.add("show");
+      }
       alert("❌ Nieprawidłowy kod");
     }
 }
