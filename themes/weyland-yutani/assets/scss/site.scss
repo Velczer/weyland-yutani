@@ -25,11 +25,15 @@
 @import "components/hero";
 @import "components/mission";
 @import "components/technology";
-@import "components/careers";
-@import "components/career";
-@import "components/site-map";
-@import "components/avalon";
 @import "components/modal";
 @import "components/ticket-form";
 @import "components/news";
 @import "components/terminal";
+@import "components/loader";
+
+// Pages
+
+@import "pages/avalon";
+@import "pages/careers";
+@import "pages/career";
+@import "pages/site-map";

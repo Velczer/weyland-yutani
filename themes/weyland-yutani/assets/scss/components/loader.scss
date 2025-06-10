@@ -1,0 +1,82 @@
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #000000de;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s all ease;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .loader-content {
+    width: 300px;
+    border: var(--border);
+    padding: 20px 0;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    animation: border-lines 2s ease infinite;
+  }
+
+  .logo--header .st0 {
+    animation: logo-fill 2s ease-in-out infinite;
+  }
+
+  .logo--header .st1 {
+    animation: logo-fill2 2s ease-in-out infinite;
+  }
+}
+
+@keyframes logo-fill {
+  0% {
+    fill: var(--yellow);
+  }
+
+  50% {
+    fill: var(--gray);
+  }
+
+  100% {
+    fill: var(--yellow);
+  }
+}
+
+@keyframes logo-fill2 {
+  0% {
+    fill: var(--gray);
+  }
+
+  50% {
+    fill: var(--yellow);
+  }
+
+  100% {
+    fill: var(--gray);
+  }
+}
+
+@keyframes border-lines {
+  0% {
+    padding: 20px 0;
+  }
+
+  50% {
+    padding: 60px 0;
+  }
+
+  100% {
+    padding: 20px 0;
+  }
+}
+

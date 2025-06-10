@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+
+<div class="page spacing">
+  <div class="container container--page">
+    <div class="content">
+      <div class="internal-header center">
+        <h1>{{ .Title }}</h1>
+      </div>
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+
+{{ partial "override.html" . }}
+
+{{ end }}

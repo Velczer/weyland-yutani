@@ -171,12 +171,16 @@ document.addEventListener("DOMContentLoaded", function () {
 // Check for transaction code
 async function checkCode() {
   const code = document.getElementById('codeInput').value.trim();
+  const loader = document.getElementById('loader');
+  console.log(loader)
+  loader.classList.add('show');
 
   if (code.length == 0) {
     const modal = document.getElementById('buyTicket');
     if (modal) {
       modal.classList.add("show");
     }
+    loader.classList.remove('show');
     return;
   }
 
@@ -195,6 +199,7 @@ async function checkCode() {
     if (modal) {
       modal.classList.add("show");
     }
+    loader.classList.remove('show');
     return;
   }
 
@@ -203,6 +208,7 @@ async function checkCode() {
   if (result.redirect) {
     window.location.href = result.redirect;
   } else {
+    loader.classList.remove('show');
     alert("❌ Coś poszło nie tak");
   }
 }
@@ -284,12 +290,21 @@ function initiateOverride() {
 document.addEventListener("DOMContentLoaded", () => {
   const hasAccess = localStorage.getItem("corp-token") === "AUTHORIZED";
 
-  document.querySelectorAll("li[data-restricted='true']").forEach(el => {
-    if (hasAccess) {
-      el.style.display = "block";
-
-      const button = document.querySelector('.override-btn');
+  if (hasAccess){
+    document.querySelectorAll("li[data-restricted='true']").forEach(el => {
+        el.classList.add('show-restricted');
+    });
+    const button = document.querySelector('.override-btn');
+    if (button) {
       button.style.display = "none";
     }
+  }
+
+  document.querySelectorAll("li[data-restricted='true'] .button").forEach(articleBtn => {
+    articleBtn.addEventListener("click", (event) => {
+      if (!hasAccess) {
+        event.preventDefault();
+      }
+    });
   });
 });

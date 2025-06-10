@@ -13,6 +13,10 @@
       object-fit: cover;
       width: 100%;
     }
+
+    &--restricted {
+      display: none;
+    }
   }
 
   a {

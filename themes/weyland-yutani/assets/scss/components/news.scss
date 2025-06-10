@@ -1,6 +1,17 @@
 .news-list {
 
-    li[data-restricted="true"] {
-        display: none;
+    li[data-restricted="true"]:not(.show-restricted) {
+        .content {
+            display: none;
+        }
+
+        .content--restricted {
+            display: block;
+        }
+
+        .button {
+            background: var(--gray);
+            cursor: not-allowed;
+        }
     }
 }
