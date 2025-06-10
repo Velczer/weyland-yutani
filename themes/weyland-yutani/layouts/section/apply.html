@@ -7,7 +7,13 @@
       <h1>{{ .Title }}</h1>
     </div>
 
-    <form class="grid form" name="apply" action="/success/" netlify netlify-honeypot="bot-field">
+    <form 
+      class="grid form" 
+      name="apply" 
+      action="/success-form/" 
+      netlify 
+      netlify-honeypot="bot-field"
+    >
       <label for="name">
         <span class="visually-hide">
           Twoje imię
@@ -47,7 +53,7 @@
 
       </label>
 
-      <label class="form__resume" style="text-align: left;">
+      <label for="resume" class="form__resume" style="text-align: left;">
         <span><strong>Ważne!</strong><br />
           W CV koniecznie umieść następujące informacje:<br />
           - Wypis poziomu twoich cech osobowych na podstawie raportu <a data-modal="szse">SZSE</a>.<br />
@@ -64,7 +70,7 @@
         <input type="text" id="bot-field" />
       </label>
 
-      <button class="form__button button" disabled="true" type="submit">Wyślij</button>
+      <button class="form__button button" type="submit">Wyślij</button>
 
     </form>
 

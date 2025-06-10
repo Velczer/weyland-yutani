@@ -7,7 +7,13 @@
       <h1 class="success-text">Access granted</h1>
     </div>
 
-    <form class="grid form ticket-form" name="ticket-form" action="/success-form/" netlify netlify-honeypot="bot-field">
+    <form 
+      class="grid form ticket-form" 
+      name="ticket-form" 
+      action="/success-form/" 
+      netlify 
+      netlify-honeypot="bot-field"
+      >
       <div class="grid grid-3">
         <label for="fullName">
           <span>Pełne imię i nazwisko</span>
@@ -31,18 +37,21 @@
       </div>
 
       <div class="section-title">Manifest</div>
+      <span style="grid-column: span 2">Opowiedz nam, dlaczego to Ty jesteś idealnym kandydatem na pokład ekspedycji</span>
       <label for="manifest" class="form__resume custom-file-input">
-        <span>Opowiedz nam, dlaczego to Ty jesteś idealnym kandydatem na pokład ekspedycji</span>
+        <span>Prześlij Manifest</span>
         <input name="manifest" id="manifest" type="file" required
           accept=".pdf, .doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
       </label>
 
 
-      <button type="submit" class="button ticket-form-submit" disabled>Wyślij formularz</button>
+      <button type="submit" class="button ticket-form-submit">Wyślij formularz</button>
     </form>
 
   </div>
 </section>
+
+<audio id="accessGrantedSound" src="/audio/access-granted.m4a" preload="auto"></audio>
 
 <script>
   const urlParams = new URLSearchParams(window.location.search);
@@ -62,6 +71,10 @@
       alert("Dostęp zabroniony lub token wygasł.");
       window.location.href = '/avalon';
     });
+
+    const audio = document.getElementById("accessGrantedSound");
+    audio.currentTime = 0; // resetuje, by zagrało od początku
+    audio.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
 
 </script>
 

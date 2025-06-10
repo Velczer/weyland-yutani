@@ -1,8 +1,7 @@
 .ticket-form {
 
-  .custom-file-input span {
-    padding: 10px 20px;
-    padding-right: 150px;
+  .custom-file-input input[type=file] {
+    padding-left: 150px;
   }
 
   .grid-3,

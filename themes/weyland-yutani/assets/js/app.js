@@ -172,7 +172,6 @@ document.addEventListener("DOMContentLoaded", function () {
 async function checkCode() {
   const code = document.getElementById('codeInput').value.trim();
   const loader = document.getElementById('loader');
-  console.log(loader)
   loader.classList.add('show');
 
   if (code.length == 0) {
@@ -234,6 +233,10 @@ function initiateOverride() {
   const terminal = document.getElementById('terminal');
   const button = document.querySelector('.override-btn');
 
+  const dataInputSound = document.getElementById("dataInputSound");
+  dataInputSound.currentTime = 0; // resetuje, by zagrało od początku
+  dataInputSound.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
+
   overlay.style.display = 'block';
   button.style.display = 'none';
   terminal.innerHTML = '';
@@ -255,7 +258,7 @@ function initiateOverride() {
         cursor.insertAdjacentText('beforebegin', line[charIndex]);
         charIndex++;
         terminal.scrollTop = terminal.scrollHeight;
-        setTimeout(typeChar, 20 + Math.random() * 50);
+        setTimeout(typeChar, 10 + Math.random() * 40);
       } else {
         container.removeChild(cursor);
         callback();
@@ -272,9 +275,11 @@ function initiateOverride() {
         setTimeout(typeNext, 200);
       });
     } else {
-        const audio = document.getElementById("accessGrantedSound");
-        audio.currentTime = 0; // resetuje, by zagrało od początku
-        audio.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
+        dataInputSound.pause();
+        dataInputSound.currentTime = 0;
+        const accessGrantedSound = document.getElementById("accessGrantedSound");
+        accessGrantedSound.currentTime = 0; // resetuje, by zagrało od początku
+        accessGrantedSound.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
 
       setTimeout(() => {
         localStorage.setItem("corp-token", "AUTHORIZED");
@@ -306,5 +311,12 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
       }
     });
+  });
+});
+
+document.querySelectorAll("form[netlify]").forEach(form => {
+  form.addEventListener("submit", () => {
+    const loader = document.getElementById('loader');
+    loader.classList.add('show');
   });
 });

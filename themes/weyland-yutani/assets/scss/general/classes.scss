@@ -97,9 +97,11 @@
     z-index: 5;
     padding: var(--spacing-1) 25px;
     color: var(--white);
-    background-color: var(--black);
+    // background-color: var(--black);
     border: var(--border);
     text-align: left;
+
+    
 
     &::before {
       @include absolute(0, 0, 0, auto);
@@ -119,6 +121,13 @@
       &::before {
         background-color: var(--gray);
       }
+    }
+  }
+
+  input[type=file] {
+    padding-left: 120px;
+    &::file-selector-button {
+      display: none;
     }
   }
 }
