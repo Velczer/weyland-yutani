@@ -228,16 +228,26 @@ const commands = [
   "[OVRD] ACCESSING HIGH-CONFIDENTIAL DATA...",
 ];
 
+function setItemWithExpiry(key, value, ttl) {
+  const now = Date.now();
+  const item = {
+    value: value,
+    expiry: now + ttl,
+  };
+  localStorage.setItem(key, JSON.stringify(item));
+}
+
 function initiateOverride() {
   const overlay = document.getElementById('terminal-overlay');
   const terminal = document.getElementById('terminal');
+  const accessText = document.getElementById('terminal-access');
   const button = document.querySelector('.override-btn');
 
   const dataInputSound = document.getElementById("dataInputSound");
   dataInputSound.currentTime = 0; // resetuje, by zagrało od początku
   dataInputSound.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
 
-  overlay.style.display = 'block';
+  overlay.classList.add('show');
   button.style.display = 'none';
   terminal.innerHTML = '';
   document.body.style.overflow = 'hidden';
@@ -258,7 +268,7 @@ function initiateOverride() {
         cursor.insertAdjacentText('beforebegin', line[charIndex]);
         charIndex++;
         terminal.scrollTop = terminal.scrollHeight;
-        setTimeout(typeChar, 10 + Math.random() * 40);
+        setTimeout(typeChar, 10 + Math.random() * 35);
       } else {
         container.removeChild(cursor);
         callback();
@@ -275,6 +285,7 @@ function initiateOverride() {
         setTimeout(typeNext, 200);
       });
     } else {
+        accessText.classList.add('show');
         dataInputSound.pause();
         dataInputSound.currentTime = 0;
         const accessGrantedSound = document.getElementById("accessGrantedSound");
@@ -282,7 +293,7 @@ function initiateOverride() {
         accessGrantedSound.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
 
       setTimeout(() => {
-        localStorage.setItem("corp-token", "AUTHORIZED");
+        setItemWithExpiry("corpToken", "AUTHORIZED" , 10 * 60 * 60 * 1000); // expire za 10h
         location.reload();
       }, 2000);
     }
@@ -293,7 +304,9 @@ function initiateOverride() {
 
 // Manage corp authorized elements
 document.addEventListener("DOMContentLoaded", () => {
-  const hasAccess = localStorage.getItem("corp-token") === "AUTHORIZED";
+  const hasAccess = getItemWithExpiry("corpToken") === 'AUTHORIZED';
+
+  console.log(hasAccess)
 
   if (hasAccess){
     document.querySelectorAll("li[data-restricted='true']").forEach(el => {
@@ -320,3 +333,20 @@ document.querySelectorAll("form[netlify]").forEach(form => {
     loader.classList.add('show');
   });
 });
+
+
+function getItemWithExpiry(key) {
+  const itemStr = localStorage.getItem(key);
+  if (!itemStr) return null;
+
+  const item = JSON.parse(itemStr);
+  const now = Date.now();
+
+  if (now > item.expiry) {
+    // wygasło
+    localStorage.removeItem(key);
+    return null;
+  }
+
+  return item.value;
+}
