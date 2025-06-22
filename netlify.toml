@@ -5,8 +5,15 @@
 [context.production.environment]
   HUGO_VERSION = "0.132.1"
 
+[context.deploy-preview]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.132.1"
 
-[context.deploy-preview]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+[dev]
+  framework = "#custom"
+  command = "hugo server --disableFastRender --port 8889 --bind 127.0.0.1 --baseURL http://localhost:8889"
+  targetPort = 8889
+  port = 8888
+  autoLaunch = true
