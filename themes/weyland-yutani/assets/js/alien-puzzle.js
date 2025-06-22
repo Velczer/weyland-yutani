@@ -141,5 +141,8 @@ function showPuzzle() {
     localStorage.removeItem('wy_logoClicks');
     localStorage.removeItem('showPuzzle');
     alienPuzzleContainer?.classList.remove('show');
+    hackingFazeSound.pause();
+    hackingFazeSound.currentTime = 0;
+    startingSong.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
   });
 }
