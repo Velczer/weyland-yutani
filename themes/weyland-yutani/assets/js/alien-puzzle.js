@@ -94,7 +94,7 @@ function checkWin() {
   if (tiles.every((val, idx) => val === idx)) {
     setTimeout(() => {
       initiateOverride();
-    }, 600);
+    }, 800);
   }
 }
 
