@@ -28,14 +28,12 @@ export function initiateOverride() {
   const overlay = document.getElementById('terminal-overlay');
   const terminal = document.getElementById('terminal');
   const accessText = document.getElementById('terminal-access');
-  const button = document.querySelector('.override-btn');
 
   const dataInputSound = document.getElementById("dataInputSound");
   dataInputSound.currentTime = 0; // resetuje, by zagrało od początku
   dataInputSound.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
 
   overlay.classList.add('show');
-  button.style.display = 'none';
   terminal.innerHTML = '';
   document.body.style.overflow = 'hidden';
 
@@ -81,7 +79,7 @@ export function initiateOverride() {
 
       setTimeout(() => {
         setItemWithExpiry("corpToken", "AUTHORIZED" , 10 * 60 * 60 * 1000); // expire za 10h
-        location.reload();
+        window.location.href = "/news/";
       }, 2000);
     }
   }

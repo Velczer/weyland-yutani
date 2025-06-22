@@ -9,36 +9,31 @@ let emptyIndex = size * size - 1;
 
 function createTiles() {
   tiles = Array.from({ length: size * size }, (_, i) => i);
-  do {
-    shuffle(tiles);
-  } while (!isSolvable(tiles) || tiles.indexOf(size * size - 1) !== tiles.length - 1);
+  emptyIndex = tiles.length - 1;
+
+  // wykonaj 1000 losowych ruchów
+  for (let i = 0; i < 1000; i++) {
+    const moves = getValidMoves(emptyIndex);
+    const move = moves[Math.floor(Math.random() * moves.length)];
+    [tiles[emptyIndex], tiles[move]] = [tiles[move], tiles[emptyIndex]];
+    emptyIndex = move;
+  }
 
   renderInitialTiles();
   updateTilePositions();
-  emptyIndex = tiles.indexOf(size * size - 1);
 }
 
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
+function getValidMoves(index) {
+  const row = Math.floor(index / size);
+  const col = index % size;
+  const moves = [];
 
-function isSolvable(array) {
-  let invCount = 0;
-  for (let i = 0; i < array.length - 1; i++) {
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[i] !== size * size - 1 && array[j] !== size * size - 1 && array[i] > array[j]) {
-        invCount++;
-      }
-    }
-  }
-  const emptyRowFromBottom = size - Math.floor(array.indexOf(size * size - 1) / size);
-  if (size % 2 === 0) {
-    return (invCount + emptyRowFromBottom) % 2 === 0;
-  }
-  return invCount % 2 === 0;
+  if (row > 0) moves.push(index - size);     // up
+  if (row < size - 1) moves.push(index + size); // down
+  if (col > 0) moves.push(index - 1);        // left
+  if (col < size - 1) moves.push(index + 1); // right
+
+  return moves;
 }
 
 function renderInitialTiles() {
@@ -54,7 +49,7 @@ function renderInitialTiles() {
       const x = value % size;
       const y = Math.floor(value / size);
       tile.style.backgroundPosition = `${-x * 100}% ${-y * 100}%`;
-      tile.addEventListener('click', () => moveTile(value));
+      tile.addEventListener('click', handleTileClick);
     }
 
     tile.style.transition = 'transform 0.3s ease';
@@ -73,8 +68,12 @@ function updateTilePositions() {
   });
 }
 
-function moveTile(value) {
-  const index = tiles.indexOf(value);
+function handleTileClick(e) {
+  const clickedIndex = tiles.indexOf(parseInt(e.target.dataset.index));
+  moveTile(clickedIndex);
+}
+
+function moveTile(index) {
   const row = Math.floor(index / size);
   const col = index % size;
   const emptyRow = Math.floor(emptyIndex / size);
@@ -93,16 +92,15 @@ function moveTile(value) {
 
 function checkWin() {
   if (tiles.every((val, idx) => val === idx)) {
-    initiateOverride();
+    setTimeout(() => {
+      initiateOverride();
+    }, 600);
   }
 }
 
 export function initAlienPuzzle() {
-  const logo = document.querySelector('.logo');
+  const logo = document.querySelector('.footer__logo');
   const puzzleKey = 'wy_logoClicks';
-
-  const alienPuzzleClose = document.getElementById('alien-puzzle-close');
-  const alienPuzzleContainer = document.getElementById('alien-puzzle-container');
 
   if (logo) {
     logo.addEventListener('click', () => {
@@ -112,6 +110,7 @@ export function initAlienPuzzle() {
 
       if (newClicks >= 3) {
         localStorage.setItem('showPuzzle', 'true');
+        showPuzzle()
       }
     });
   }
@@ -119,13 +118,28 @@ export function initAlienPuzzle() {
   const hasAccess = getItemWithExpiry("corpToken") === "AUTHORIZED";
 
   if (localStorage.getItem('showPuzzle') === 'true' && !hasAccess) {
-    alienPuzzleContainer?.classList.add('show');
-    createTiles();
-
-    alienPuzzleClose.addEventListener('click', () => {
-      localStorage.removeItem('wy_logoClicks');
-      localStorage.removeItem('showPuzzle');
-      alienPuzzleContainer?.classList.remove('show');
-    });
+    showPuzzle()
   }
+}
+
+function showPuzzle() {
+  const alienPuzzleClose = document.getElementById('alien-puzzle-close');
+  const alienPuzzleContainer = document.getElementById('alien-puzzle-container');
+
+  alienPuzzleContainer?.classList.add('show');
+  createTiles();
+
+  const hackingFazeSound = document.getElementById("hackingFazeSound");
+  hackingFazeSound.currentTime = 0; // resetuje, by zagrało od początku
+  hackingFazeSound.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
+
+  const startingSong = document.getElementById("startingSong");
+  startingSong.pause();
+  startingSong.currentTime = 0;
+
+  alienPuzzleClose.addEventListener('click', () => {
+    localStorage.removeItem('wy_logoClicks');
+    localStorage.removeItem('showPuzzle');
+    alienPuzzleContainer?.classList.remove('show');
+  });
 }

@@ -7,11 +7,6 @@ export function initAccessControl() {
     document.querySelectorAll("li[data-restricted='true']").forEach(el => {
       el.classList.add("show-restricted");
     });
-
-    const button = document.querySelector(".override-btn");
-    if (button) {
-      button.style.display = "none";
-    }
   }
 
   document.querySelectorAll("li[data-restricted='true'] .button").forEach(btn => {
