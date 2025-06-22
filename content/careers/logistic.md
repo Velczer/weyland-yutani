@@ -1,6 +1,6 @@
 ---
 title: "Logistyk i Magazynier"
-description: "Firma Weyland-Yutani zatrudni logistyków odpowiedzialnych za zarządzanie magazynem, dystrybucję materiałów oraz koordynację transportu w kolonii."
+description: "Specjalista odpowiedzialny za zarządzanie magazynem, dystrybucję materiałów oraz koordynację transportu w kolonii."
 date: 2019-09-18T15:13:13-04:00
 salary: "50,000"
 location: "Homestead II"

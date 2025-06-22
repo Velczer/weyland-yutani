@@ -1,0 +1,18 @@
+<li class="career-card">
+  <div class="career-card__inner">
+    <div class="career-card__body">
+      <h2 class="career-card__title h4">{{ .Title }}</h2>
+      {{ with .Params.description }}
+        <p class="career-card__description">{{ . }}</p>
+      {{ end }}
+        <a
+          class="button careers__button pseudo-link"
+          href="{{ .RelPermalink  }}"
+          aria-label="Learn more about the {{ .Title }} job opening."
+        >
+          Zobacz ofertę
+        </a>
+      </a>
+    </div>
+  </div>
+</li>

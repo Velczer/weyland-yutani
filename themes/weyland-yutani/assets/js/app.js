@@ -1,10 +1,10 @@
 import { initNavigation } from './navigation.js';
 import { initAccessControl } from './access.js';
-import { initOverrideTerminal } from './terminal.js';
 import { initTransaction } from './transaction.js';
 import { setupFadeInAnimation } from './animations.js';
 import { displayFutureDateTime } from './future-clock.js';
 import { initModals } from './modal.js';
+import { initAlienPuzzle } from './alien-puzzle.js';
 
 // Netlify forms
 document.querySelectorAll("form[netlify]").forEach(form => {
@@ -18,9 +18,9 @@ document.querySelectorAll("form[netlify]").forEach(form => {
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initAccessControl();
-  initOverrideTerminal();
   initTransaction();
   initModals();
+  initAlienPuzzle();
 
   // Start the future time display
   displayFutureDateTime();

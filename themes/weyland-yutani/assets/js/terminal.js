@@ -24,7 +24,7 @@ function setItemWithExpiry(key, value, ttl) {
   localStorage.setItem(key, JSON.stringify(item));
 }
 
-function initiateOverride() {
+export function initiateOverride() {
   const overlay = document.getElementById('terminal-overlay');
   const terminal = document.getElementById('terminal');
   const accessText = document.getElementById('terminal-access');
@@ -89,10 +89,4 @@ function initiateOverride() {
   typeNext();
 }
 
-export function initOverrideTerminal() {
-  const overrideBtn = document.querySelector('.js-override');
-  if (overrideBtn) {
-    overrideBtn.addEventListener('click', initiateOverride);
-  }
-}
  

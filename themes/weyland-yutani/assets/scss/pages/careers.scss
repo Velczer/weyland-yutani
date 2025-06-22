@@ -18,6 +18,10 @@
     padding: var(--spacing-2) var(--spacing-2);
   }
 
+  &__button {
+    font-size: 1rem;
+  }
+
   &__job-title {
     font-weight: var(--weight-bold);
     color: var(--white);
@@ -37,6 +41,81 @@
 
     @include screen-below(600px) {
       border: var(--border);
+    }
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 3rem 0;
+  }
+
+  .career-card {
+    list-style: none;
+
+    &__inner {
+      background: linear-gradient(145deg, #111, #1a1a1a);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.02),
+        0 10px 20px rgba(0, 0, 0, 0.4);
+      transition: box-shadow 0.25s ease, border 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 280px;
+      backdrop-filter: blur(6px);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover {
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.05),
+          0 15px 30px rgba(0, 0, 0, 0.5),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+      color: #bbb;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    &__button {
+      align-self: flex-start;
+      font-weight: bold;
     }
   }
 }

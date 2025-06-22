@@ -7,10 +7,12 @@
       <h1>{{ .Title }}</h1>
     </div>
 
-    <ul class="unstyled-list">
+    <ul class="unstyled-list careers-cards">
 
       {{ range .Pages }}
 
+      {{ partial "components/career-card.html" . }}
+{{/*  
         <li class="careers__item relative">
           <div class="careers__row grid grid--careers grid--one-col-mobile">
 
@@ -27,7 +29,7 @@
             </a>
 
           </div>
-        </li>
+        </li>  */}}
 
       {{ end }}
 
