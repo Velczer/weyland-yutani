@@ -54,12 +54,6 @@ enableRobotsTXT = true
     weight = 2
 
   [[menu.info]]
-    identifier = "site-map"
-    name = "Site Map"
-    pageRef = "/site-map/"
-    weight = 1
-
-  [[menu.info]]
     identifier = "site-information"
     name = "Site Information"
     pageRef = "/site-information/"
