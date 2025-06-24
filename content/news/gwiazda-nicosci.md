@@ -15,12 +15,12 @@ restricted: true
 > **Jednostka prowadząca:** Weyland-Yutani – Wydział Transcendentalnej Kartografii
 
 
-### ⚠️ UWAGA: RAPORT USZKODZONY
+### UWAGA: RAPORT USZKODZONY
 
 > *Systemy MU/TH/UR próbują zrekonstruować dane z bufora – kodowanie ARX/N-HEX z przerwami w integralności czasowej.*
 
 
-### 📄 Projekt „Gwiazda Nicości”
+### Projekt „Gwiazda Nicości”
 
 Projekt klasy **BLACK OMEGA** mający na celu eksplorację anomalii grawitacyjnej wykrytej poza granicą znanego katalogu układów. Obiekt nie emitował światła w spektrum widzialnym.  
 Wstępnie zaklasyfikowany jako „hiperobiekt” – o nienaturalnej masie i anomaliach czasoprzestrzennych.

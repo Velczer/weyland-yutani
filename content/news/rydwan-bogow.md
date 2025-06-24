@@ -16,14 +16,14 @@ restricted: true
 > **Jednostka odpowiedzialna:** Weyland-Yutani External Recovery Division
 
 
-### 📡 Zgłoszenie sygnału
+### Zgłoszenie sygnału
 
 > Frachtowiec **USCSS Montero**, lecący z ładunkiem trytu do kolonii na Świecie Suttera, odebrał zakodowany sygnał distress z niezidentyfikowanej jednostki. Dane z MU/TH/UR wskazały na **zaginiony od ponad 70 lat statek badawczy USCSS Kronos**.
 
 Na rozkaz przedstawiciela korporacji pokładowej załoga Montero zmieniła kurs i przeprowadziła dokowanie z jednostką źródłową.
 
 
-### 🚨 Stan statku USCSS Kronos
+### Stan statku USCSS Kronos
 
 - Znaleziono pięć ocalałych osób w hibernacji.  
 - Systemy podtrzymywania życia wyłączone.  
@@ -31,7 +31,7 @@ Na rozkaz przedstawiciela korporacji pokładowej załoga Montero zmieniła kurs 
 - Zanotowano **ślady walki, sabotażu i pozostawione ciało syntetyczki Ava 6**.
 
 
-### 🧬 Substancja 26 Draconis
+### Substancja 26 Draconis
 
 > Eksperymentalna odmiana czarnej mazi, mutagenna forma biologiczna pozyskana z planetoidy **LV-1113**.
 
@@ -41,7 +41,7 @@ Na rozkaz przedstawiciela korporacji pokładowej załoga Montero zmieniła kurs 
 - Materiał wysoce niestabilny – potwierdzone działanie mimo dekad ekspozycji w próżni.
 
 
-### 🛠️ Uszkodzenia i incydenty
+### Uszkodzenia i incydenty
 
 - **Montero został zniszczony** w wyniku sabotażu związanego z rozkazem pozyskania materiału ksenomorficznego (ROZKAZ 966).  
 - Próby naprawy Kronosa przeprowadzono pod ciągłym zagrożeniem:  
@@ -49,7 +49,7 @@ Na rozkaz przedstawiciela korporacji pokładowej załoga Montero zmieniła kurs 
   - działania ukrytego syntetycznego agenta (Lucas, agent Bionational)
 
 
-### 📌 Rekomendacje korporacyjne
+### Rekomendacje korporacyjne
 
 - Pełna dekontaminacja jednostki Kronos  
 - Utylizacja substancji 26 Draconis, poza kontrolowanymi laboratoriami  

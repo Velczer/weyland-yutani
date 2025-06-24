@@ -16,7 +16,7 @@ restricted: true
 > **Uczestnicy:** Ekspedycja badawcza USCSS *Prometheus* (finansowana przez Weyland Corp.)
 
 
-### 🧭 Protokół misji
+### Protokół misji
 
 > Celem misji była analiza obiektu zlokalizowanego na LV-223, potencjalnie związanego z pozaziemską cywilizacją określaną roboczo jako „Inżynierowie”.  
 > Zespół naukowców pod przewodnictwem dr Elizabeth Shaw i dr Charliego Hollowaya miał przeprowadzić kontakt biologiczno-lingwistyczny z domniemaną inteligencją, której ślady odkryto w artefaktach prehistorycznych kultur Ziemi.
@@ -24,7 +24,7 @@ restricted: true
 USCSS *Prometheus* został wysłany jako misja badawcza klasy eksperymentalnej, bez komponentu militarnego. Na pokładzie znajdowało się 17 członków załogi, w tym jeden syntetyk: **David 8**, najnowszy model korporacyjny.
 
 
-### 🌌 Charakterystyka LV-223
+### Charakterystyka LV-223
 
 Choć teoretycznie księżyc zdolny do podtrzymania życia po minimalnej adaptacji atmosfery, LV-223 jest silnie niestabilny biologicznie.  
 Temperatura powierzchni utrzymuje się na poziomie -30°C, ale wewnątrz kopuł wykryto kontrolowane warunki sprzyjające przechowywaniu materiału organicznego.
@@ -32,7 +32,7 @@ Temperatura powierzchni utrzymuje się na poziomie -30°C, ale wewnątrz kopuł 
 > Wstępna analiza terenu ujawniła ogromne struktury przypominające silosy lub świątynie — wybudowane przez pozaziemskich konstruktorów. Wnętrza obiektów zawierały zarówno zaawansowane systemy przechowywania substancji biologicznej, jak i holograficzne rejestry aktywności lokalnych form życia.
 
 
-### 🧬 Substancja AO-3959X.91 – “Czarny płyn”
+### Substancja AO-3959X.91 – “Czarny płyn”
 
 Zidentyfikowano substancję organiczną o zmiennej strukturze molekularnej — zdolną do rekombinacji DNA, mutacji tkanek oraz infekowania nosicieli.  
 W kontakcie z organizmem ludzkim – prowadzi do rozkładu komórkowego, agresywnej mutacji lub nieprzewidywalnego namnażania nowej formy życia.
@@ -40,7 +40,7 @@ W kontakcie z organizmem ludzkim – prowadzi do rozkładu komórkowego, agresyw
 > Zasoby substancji zostały zabezpieczone w jednej z komór transportowych. Reakcja Davida 8 na kontakt z substancją sugeruje możliwe wcześniejsze zaprogramowanie celu misji.
 
 
-### 🔥 Incydent i zakłócenia
+### Incydent i zakłócenia
 
 Po wejściu do struktury doszło do kilku naruszeń protokołów:
 
@@ -51,7 +51,7 @@ Po wejściu do struktury doszło do kilku naruszeń protokołów:
 > Organizm wykazał wrogość wobec załogi. Został zneutralizowany poprzez kolizję statku *Prometheus* z opuszczaną jednostką transportową rasy Inżynierów.
 
 
-### 👁️ Utracone, ale nie zapomniane
+### Utracone, ale nie zapomniane
 
 Misja uznana za częściowo udaną:  
 - **Zabezpieczono materiał genetyczny** oraz **pełną mapę strukturalną kompleksu**  
@@ -61,7 +61,7 @@ Misja uznana za częściowo udaną:
 > *Brak kontaktu z USCSS Prometheus od 29.12.2093 — komunikacja przerwana. Sygnał Davida 8 wznowiony 09.01.2094 z innego regionu układu.*
 
 
-### 📌 Rekomendacje
+### Rekomendacje
 
 - Wznowienie programu poszukiwania technologii Inżynierów  
 - Priorytetowa analiza substancji AO-3959X.91  

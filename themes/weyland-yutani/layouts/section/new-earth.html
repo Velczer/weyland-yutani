@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <h1>{{ .Title }}</h1>
+      <h2 class="hero__subheading h3 letter-spacing">Początek</h2>
+    </div>
+
+  </div>
+  <div class="hero__background">
+    <img class="hero__background-image" src="/images/new-earth.png" alt="">
+  </div>
+</section>
+
+<section>
+  <div class="spacing">
+
+    <div class="container container--page">
+        <div class="internal-header center">
+            <h2>Nasza misja</h2>
+        </div>
+
+        {{ .Content }}
+    </div>
+  </div>
+</section>
+
+
+<section class="video-section" id="video-section">
+  <div class="video-section__parallax">
+    <iframe
+      src="https://www.youtube.com/embed/rN5f72lhJz8?autoplay=1&rel=0&modestbranding=1&controls=0"
+      allow="autoplay; encrypted-media"
+      frameborder="0"
+      allowfullscreen
+      class="w-full h-full">
+    </iframe>
+  </div>
+</section>
+
+
+<section class="center">
+    <div class="spacing">
+    </div>
+</section>
+
+
+
+{{ end }}

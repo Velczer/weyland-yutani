@@ -15,22 +15,22 @@ date: 2021-06-09T17:55:15-04:00
 > **Uczestnicy:** Jednostka badawcza Lasalle Bionational  
 
 
-### 📄 Protokół misji
+### Protokół misji
 
 > Odebranie danych oraz próbek badań ze stacji badawczej oraz przetransportowanie ich do najbliższej stacji Weyland Yutani.
 
 
-### 🧬 Niezidentyfikowana forma życia
+### Niezidentyfikowana forma życia
 
 O godzinie 19:36 dnia 11.06.2201 doszło do kontaktu z nieznaną formą organizmu pasożytniczego. Wstępne analizy wskazywały na wysoką adaptacyjność do warunków środowiska oraz zachowania drapieżne.
 
 
-### 🛑 Decyzja o ewakuacji
+### Decyzja o ewakuacji
 
 Decyzja o przerwaniu misji zapadła po awarii androida Carla - członka załogi. Sygnał distress nadano o 21:17. Stacja orbitalna rozpoczęła procedurę odbioru kapsuły ratunkowej.
 
 
-### 📦 Postanowienia
+### Postanowienia
 
 - Planeta oznaczona jako **“Niezdatna do kolonizacji”**
 - Dane z czarnej skrzynki przesłane do centrali Weyland-Yutani na *Sevastopol Station*

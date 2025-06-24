@@ -27,15 +27,15 @@
 @import "components/technology";
 @import "components/modal";
 @import "components/ticket-form";
-@import "components/news";
 @import "components/terminal";
 @import "components/loader";
 @import "components/alien-puzzle";
 @import "components/video";
-@import "components/f11-warning";
 
 // Pages
 
+@import "pages/news";
 @import "pages/avalon";
 @import "pages/careers";
 @import "pages/career";
+@import "pages/new-earth";

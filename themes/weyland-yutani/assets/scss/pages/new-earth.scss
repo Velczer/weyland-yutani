@@ -1,0 +1,11 @@
+.new-earth {
+    &__background {
+        height: 100vh;
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('/images/new-earth.png');
+        display: flex;
+    }
+}
