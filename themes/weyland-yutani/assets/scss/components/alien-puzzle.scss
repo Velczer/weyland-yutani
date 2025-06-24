@@ -15,6 +15,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    h2 {
+      color: var(--white);
+    }
 
     &-overlay {
         position: fixed;
@@ -40,8 +46,8 @@
 
   &__close {
     position: absolute;
-    top: -40px;
-    right: -40px;
+    top: -56px;
+    right: -56px;
     background: none;
     border: none;
     color: #ffd700;

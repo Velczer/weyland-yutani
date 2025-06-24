@@ -133,9 +133,14 @@ function showPuzzle() {
   hackingFazeSound.currentTime = 0; // resetuje, by zagrało od początku
   hackingFazeSound.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
 
-  const startingSong = document.getElementById("startingSong");
-  startingSong.pause();
-  startingSong.currentTime = 0;
+  const videoSection = document.getElementById('video-section');
+  if (videoSection) {
+    videoSection.remove();
+  }
+
+  // const startingSong = document.getElementById("startingSong");
+  // startingSong.pause();
+  // startingSong.currentTime = 0;
 
   alienPuzzleClose.addEventListener('click', () => {
     localStorage.removeItem('wy_logoClicks');
@@ -143,6 +148,6 @@ function showPuzzle() {
     alienPuzzleContainer?.classList.remove('show');
     hackingFazeSound.pause();
     hackingFazeSound.currentTime = 0;
-    startingSong.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
+    // startingSong.play().catch(e => console.warn("Nie można odtworzyć dźwięku:", e));
   });
 }

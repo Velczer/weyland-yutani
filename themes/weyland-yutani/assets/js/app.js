@@ -14,6 +14,34 @@ document.querySelectorAll("form[netlify]").forEach(form => {
   });
 });
 
+
+const warning = document.getElementById('f11-warning');
+
+// Wykrycie trybu pełnoekranowego
+function checkFullscreen() {
+  if (
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    window.innerHeight === screen.height
+  ) {
+    warning.classList.add('hide');
+  }
+}
+
+// Obsługa klawisza F11
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'F11') {
+    // Daj chwilę na wejście w fullscreen
+    setTimeout(checkFullscreen, 500);
+  }
+});
+
+// Na wszelki wypadek – wykryj fullscreen zmiany systemowe
+document.addEventListener('fullscreenchange', checkFullscreen);
+document.addEventListener('webkitfullscreenchange', checkFullscreen);
+document.addEventListener('mozfullscreenchange', checkFullscreen);
+
 // Init functions
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
@@ -24,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Start the future time display
   displayFutureDateTime();
+  checkFullscreen()
 
   document.querySelectorAll('.gsap-fade-in').forEach(setupFadeInAnimation);
 });
+

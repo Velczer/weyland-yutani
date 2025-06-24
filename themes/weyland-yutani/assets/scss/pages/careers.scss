@@ -1,5 +1,6 @@
 .careers {
   padding-bottom: #{create-fluid-value(72px, 144px)};
+  padding-top: #{create-fluid-value(72px, 144px)};
 
   &__headline {
     margin-bottom: var(--spacing-4);

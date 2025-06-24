@@ -78,6 +78,10 @@ body {
   font-weight: var(--weight-normal);
 }
 
+section {
+  background-color: var(--black);
+}
+
 a {
   color: var(--white);
   letter-spacing: 3px;
