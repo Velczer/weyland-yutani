@@ -29,6 +29,8 @@
     display: block;
     margin: 0;
     line-height: 1;
+    display: flex;
+    align-items: center;
 
     @include screen-below($tablet) {
       text-align: center;

@@ -17,7 +17,7 @@
     padding-bottom: #{create-fluid-value(55px, 220px)};
     color: var(--white);
     font-weight: var(--weight-normal);
-    text-transform: uppercase;
+    text-transform: none;
   }
 
   &__background {
