@@ -1,0 +1,5 @@
+.single {
+    .pagination[data-restricted="true"]:not(.show-restricted) {
+        display: none;
+    }
+}

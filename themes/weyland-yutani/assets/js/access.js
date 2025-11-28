@@ -7,6 +7,10 @@ export function initAccessControl() {
     document.querySelectorAll("li[data-restricted='true']").forEach(el => {
       el.classList.add("show-restricted");
     });
+
+    document.querySelectorAll(".single .pagination[data-restricted='true']").forEach(el => {
+      el.classList.add("show-restricted");
+    });
   }
 
   document.querySelectorAll("li[data-restricted='true'] .button").forEach(btn => {

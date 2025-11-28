@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<div class="page spacing">
+<div class="page single spacing">
   <div class="container container--page">
     <article class="page__content">
 
@@ -23,7 +23,7 @@
   </div>
 
   {{ if or .PrevInSection .NextInSection }}
-    <div class="pagination">
+    <div class="pagination" data-restricted="true">
       <div class="grid grid--two-column">
 
         {{ with .PrevInSection }}
