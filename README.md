@@ -1,13 +1,12 @@
-# Weyland-Yutani Corporation Hugo Theme on Netlify
+# Weyland-Yutani Motyw oparty o Hugo na silniku Netlify
 
 ![Weyland-Yutani Corporation](https://raw.githubusercontent.com/jacobproffer/weyland-yutani/master/static/images/weyland-yutani-social.jpg)
 
-A responsive theme for Hugo themed around the fictional Weyland-Yutani Corporation featured throughout the Alien universe.
+Mój prywatny projekt strony Weyland-yutani oparty o autorski scenariusz rozgrywany z moimi przyjaciółmi.
+http://v-weyland-yutani.netlify.app/
 
-## Configure Netlify account
-add NETLIFY_DATABASE_URL to .env 
-create tables and key's
+inspirowane:
+https://github.com/jacobproffer/weyland-yutani
 
 ## Run netlify
-
 `netlify dev`
